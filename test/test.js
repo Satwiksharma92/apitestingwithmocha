@@ -16,4 +16,19 @@ describe('returns true', function() {
                 done();
             });
     });
+ });
+describe('returns true for comments', function() {
+    it('returns true for comments', function(done) {
+         request.get({ url: baseUrl + '/comments/4/' },
+            function(error, response, body) {
+            		var bodyObj = JSON.parse(body);
+            		expect(bodyObj.postId).to.equal(1);
+            		expect(bodyObj.name).to.equal("alias odio sit");
+            		expect(bodyObj.email).to.equal("Lew@alysha.tv");
+            		expect(bodyObj.body).to.equal("non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati");
+                    expect(response.statusCode).to.equal(200);
+                    console.log(body);
+                done();
+            });
+    });
 });
