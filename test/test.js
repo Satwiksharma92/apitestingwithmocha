@@ -66,7 +66,10 @@ describe('returns true for comments', function() {
   })
             function(error, response, body) {
                     var bodyObj = JSON.parse(body);
-                    
+                
+
+
+
                     var new_string = 'returns true for comments';
 
                     // expect(bodyObj.postId).to.equal(1);
@@ -74,6 +77,9 @@ describe('returns true for comments', function() {
                     // expect(bodyObj.email).to.equal("Lew@alysha.tv");
                     // expect(bodyObj.body).to.equal("non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati");
                     expect(response.statusCode).to.equal(200);
+
+
+                    expect(response.body).to.equal("body");
                     console.log(body);
                 done();
             });
