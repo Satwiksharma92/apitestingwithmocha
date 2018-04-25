@@ -62,15 +62,14 @@ describe('returns true for comments', function() {
 describe('returns true for comments', function() {
     it('returns true for comments', function(done) {
          request.post({ url: baseUrl + '/posts/' },
-            send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
+            send.JSON({"userId": 1,"id": 1090,"title": "stest","body": "testing body"};
+                send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
+  })
+            function(error, response, body) {
+                    var bodyObj = JSON.parse(body);
 
-               
-testing
-testing
 
-testing
-
-testing
+var satwik = 'true for everyone';
 
                     var new_string = 'returns true for comments';
 
