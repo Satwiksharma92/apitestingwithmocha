@@ -18,7 +18,7 @@ describe('returns true', function() {
             });
     });
  });
-//jus to check
+//jus to checks
 
 describe('returns true', function() {
     it('returns true', function(done) {
