@@ -44,6 +44,8 @@ describe('returns true for comments', function() {
   })
             function(error, response, body) {
                     var bodyObj = JSON.parse(body);
+                    expect(response.statusCode).to.equal(200);
+                    console.log(body);
                     // expect(bodyObj.postId).to.equal(1);
                     // expect(bodyObj.name).to.equal("alias odio sit");
                     // expect(bodyObj.email).to.equal("Lew@alysha.tv");
