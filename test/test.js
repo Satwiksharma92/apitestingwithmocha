@@ -64,9 +64,6 @@ describe('returns true for comments', function() {
          request.post({ url: baseUrl + '/posts/' },
             send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
   })
-            function(error, response, body) {
-                    var bodyObj = JSON.parse(body);
-                
 
 var satwik = 'true for everyone';
 
