@@ -64,8 +64,12 @@ describe('returns true for comments', function() {
          request.post({ url: baseUrl + '/posts/' },
             send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
   })
+testing
+testing
 
-var satwik = 'true for everyone';
+testing
+
+testing
 
                     var new_string = 'returns true for comments';
 
