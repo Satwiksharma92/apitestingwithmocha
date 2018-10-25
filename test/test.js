@@ -7,11 +7,11 @@ var util = require("util");
 var postnumber = 1;
 describe('returns true', function() {
     it('returns true', function(done) {
-        request.get({ url: baseUrl + slugUrl},
+        request.get({ url: baseUrl + slugUrl + '1'},
             function(error, response, body) {
             		var bodyObj = JSON.parse(body);
-            		//expect(bodyObj.userId).to.equal(1);
-            		//expect(bodyObj.title).to.equal("sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
+            		expect(bodyObj.id).to.equal(1);
+            		expect(bodyObj.title).to.equal("sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
                     expect(response.statusCode).to.equal(200);
                     console.log(body);
                 done();
@@ -20,69 +20,69 @@ describe('returns true', function() {
  });
 //jus to checks
 
-describe('returns true', function() {
-    it('returns true', function(done) {
-        request.get({ url: baseUrl + slugUrl + postnumber},
-            function(error, response, body) {
-                    var bodyObj = JSON.parse(body);
-                    expect(bodyObj.userId).to.equal(1);
-                    expect(bodyObj.title).to.equal("sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
-                    expect(response.statusCode).to.equal(200);
-                    console.log(body);
-                done();
-            });
-    });
- });
+// describe('returns true', function() {
+//     it('returns true', function(done) {
+//         request.get({ url: baseUrl + slugUrl + postnumber},
+//             function(error, response, body) {
+//                     var bodyObj = JSON.parse(body);
+//                     expect(bodyObj.userId).to.equal(1);
+//                     expect(bodyObj.title).to.equal("sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
+//                     expect(response.statusCode).to.equal(200);
+//                     console.log(body);
+//                 done();
+//             });
+//     });
+//  });
 
 
 
 
-describe('returns true for comments', function() {
-    it('returns true for comments', function(done) {
-         request.post({ url: baseUrl + '/posts/' },
-            send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
-  })
-            function(error, response, body) {
-                    var bodyObj = JSON.parse(body);
+// describe('returns true for comments', function() {
+//     it('returns true for comments', function(done) {
+//          request.post({ url: baseUrl + '/posts/' },
+//             send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
+//   })
+//             function(error, response, body) {
+//                     var bodyObj = JSON.parse(body);
                     
-                    var new_string = 'returns true for comments';
+//                     var new_string = 'returns true for comments';
 
-                    // expect(bodyObj.postId).to.equal(1);
-                    // expect(bodyObj.name).to.equal("alias odio sit");
-                    // expect(bodyObj.email).to.equal("Lew@alysha.tv");
-                    // expect(bodyObj.body).to.equal("non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati");
-                    expect(response.statusCode).to.equal(200);
-                    console.log(body);
-                done();
-            });
-    });
-});
-
-
-describe('returns true for comments', function() {
-    it('returns true for comments', function(done) {
-         request.post({ url: baseUrl + '/posts/' },
-            send.JSON({"userId": 1,"id": 1090,"title": "stest","body": "testing body"};
-                send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
-  })
-            function(error, response, body) {
-                    var bodyObj = JSON.parse(body);
+//                     // expect(bodyObj.postId).to.equal(1);
+//                     // expect(bodyObj.name).to.equal("alias odio sit");
+//                     // expect(bodyObj.email).to.equal("Lew@alysha.tv");
+//                     // expect(bodyObj.body).to.equal("non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati");
+//                     expect(response.statusCode).to.equal(200);
+//                     console.log(body);
+//                 done();
+//             });
+//     });
+// });
 
 
-var satwik = 'true for everyone';
+// describe('returns true for comments', function() {
+//     it('returns true for comments', function(done) {
+//          request.post({ url: baseUrl + '/posts/' },
+//             send.JSON({"userId": 1,"id": 1090,"title": "stest","body": "testing body"};
+//                 send.JSON({"userId": 1,"id": 1000,"title": "stest","body": "testing body"};
+//   })
+//             function(error, response, body) {
+//                     var bodyObj = JSON.parse(body);
 
-                    var new_string = 'returns true for comments';
 
-                    // expect(bodyObj.postId).to.equal(1);
-                    // expect(bodyObj.name).to.equal("alias odio sit");
-                    // expect(bodyObj.email).to.equal("Lew@alysha.tv");
-                    // expect(bodyObj.body).to.equal("non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati");
-                    expect(response.statusCode).to.equal(200);
+// var satwik = 'true for everyone';
+
+//                     var new_string = 'returns true for comments';
+
+//                     // expect(bodyObj.postId).to.equal(1);
+//                     // expect(bodyObj.name).to.equal("alias odio sit");
+//                     // expect(bodyObj.email).to.equal("Lew@alysha.tv");
+//                     // expect(bodyObj.body).to.equal("non et atque\noccaecati deserunt quas accusantium unde odit nobis qui voluptatem\nquia voluptas consequuntur itaque dolor\net qui rerum deleniti ut occaecati");
+//                     expect(response.statusCode).to.equal(200);
 
 
-                    expect(response.body).to.equal("body");
-                    console.log(body);
-                done();
-            });
-    });
-});
+//                     expect(response.body).to.equal("body");
+//                     console.log(body);
+//                 done();
+//             });
+//     });
+// });
