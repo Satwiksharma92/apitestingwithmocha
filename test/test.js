@@ -6,12 +6,12 @@ var slugUrl = "/posts/";
 var util = require("util");
 var postnumber = 1;
 describe('returns true', function() {
-    it('returns true', function(done) {
-        request.get({ url: baseUrl + slugUrl + '1'},
+    it('returns blue when working', function(done) {
+        request.get({ url: baseUrl + slugUrl},
             function(error, response, body) {
             		var bodyObj = JSON.parse(body);
-            		expect(bodyObj.id).to.equal(1);
-            		expect(bodyObj.title).to.equal("sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
+            		expect(bodyObj.id).to.include(1);
+            		expect(bodyObj.title).to.include("sunt aut facere repellat provident occaecati excepturi optio reprehenderit");
                     expect(response.statusCode).to.equal(200);
                     console.log(body);
                 done();
